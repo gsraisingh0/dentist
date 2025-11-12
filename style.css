@@ -1,0 +1,137 @@
+ /* <!-- Inline CSS: single-file requirement --> */
+      /*
+        Dantice — single-file responsive site
+        - Use CSS variables for easy theming
+        - Flexbox and Grid for layout
+        - Comments note how to edit sections and replace placeholders
+      */
+
+      :root{
+        --bg: #f7fbfc;
+        --card: #ffffff;
+        --text: #04303a;
+        --muted: #5c6b6e;
+        --accent: #0aa6a6; /* teal */
+        --accent-dark: #0a8b8b;
+        --glass: rgba(255,255,255,0.6);
+        --radius: 12px;
+        /* --max-width: 1100px; */
+        --shadow: 0 6px 20px rgba(12,31,34,0.08);
+        --gap: 1.25rem;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      }
+
+      /* Resets and base */
+      *{box-sizing:border-box}
+      html,body{height:100%}
+      body{
+        margin:0;
+        background:var(--bg);
+        color:var(--text);
+        -webkit-font-smoothing:antialiased;
+        -moz-osx-font-smoothing:grayscale;
+        line-height:1.45;
+        scroll-behavior:smooth; /* smooth scrolling */
+      }
+
+      a{color:var(--accent);text-decoration:none}
+      img{max-width:100%;display:block}
+
+      /* Site container */
+      .wrap{max-width:var(--max-width);margin:0 auto;padding:1.25rem}
+
+      /* Header */
+      header.site-header{
+        position:sticky;top:0;left:0;right:0;z-index:60;
+        backdrop-filter: blur(6px);
+        background:linear-gradient(180deg, rgba(255,255,255,0.72), rgba(255,255,255,0.6));
+      }
+      .site-header .bar{
+        display:flex;align-items:center;justify-content:space-between;padding:0.6rem 0;
+      }
+      .logo{
+        display:flex;align-items:center;gap:0.6rem;font-weight:600;font-size:1.05rem;color:var(--accent-dark)
+      }
+      .logo .mark{width:42px;height:42px;border-radius:10px;background:linear-gradient(180deg,var(--accent),var(--accent-dark));display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+
+      /* Navigation */
+      nav.main-nav{display:flex;gap:1rem;align-items:center}
+      nav.main-nav a{padding:0.5rem 0.6rem;border-radius:8px;color:var(--text);font-weight:500}
+      nav.main-nav a:hover,nav.main-nav a:focus{background:var(--glass)}
+
+      /* Mobile hamburger */
+      .menu-btn{display:none;background:transparent;border:0;padding:6px;border-radius:8px}
+      .menu-btn svg{width:24px;height:24px}
+
+      /* Hero */
+      .hero{
+        display:grid;grid-template-columns:1fr;gap:1rem;align-items:center;padding:3.25rem 0 2rem;
+      }
+      .hero-inner{display:flex;flex-direction:column;gap:1rem}
+      .kicker{display:inline-block;background:rgba(10,166,166,0.12);color:var(--accent-dark);padding:6px 10px;border-radius:999px;font-weight:600;font-size:0.9rem}
+      h1{margin:0;font-size:2.2rem;line-height:1.04}
+      p.lead{margin:0;color:var(--muted);max-width:55ch}
+      .hero-cta{display:flex;gap:0.75rem;flex-wrap:wrap}
+      .btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.7rem 1rem;border-radius:10px;border:0;cursor:pointer;font-weight:600}
+      .btn--primary{background:var(--accent);color:white;box-shadow:var(--shadow)}
+      .btn--ghost{background:transparent;border:1px solid rgba(8,20,20,0.06);color:var(--text)}
+
+      /* Sections */
+      section{padding:2rem 0}
+      .section-title{display:flex;align-items:baseline;gap:0.75rem;margin-bottom:1rem}
+      .section-title h2{margin:0;font-size:1.25rem}
+      .muted{color:var(--muted);font-size:0.95rem}
+
+      /* About two-column */
+      .about{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);align-items:center}
+      .about .about-image{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+      .about .about-text p{margin-top:0}
+
+      /* Services cards */
+      .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+      .service{background:var(--card);padding:1.25rem;border-radius:12px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:0.8rem}
+      .service .icon{width:56px;height:56px;border-radius:10px;background:linear-gradient(180deg,rgba(10,166,166,0.12),rgba(10,166,166,0.06));display:flex;align-items:center;justify-content:center;color:var(--accent-dark);font-size:1.2rem}
+      .service h3{margin:0;font-size:1.02rem}
+      .service p{margin:0;color:var(--muted);font-size:0.95rem}
+
+      /* Gallery grid */
+      .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0.6rem}
+      .gallery-item{border-radius:10px;overflow:hidden;height:140px;background:#e9f6f6}
+      .gallery-item img{width:100%;height:100%;object-fit:cover}
+
+      /* Contact form */
+      .contact-wrap{display:grid;grid-template-columns:1fr 380px;gap:1rem;align-items:start}
+      form.contact-form{background:var(--card);padding:1rem;border-radius:12px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:0.75rem}
+      label{font-size:0.9rem}
+      input[type="text"],input[type="email"],input[type="tel"],textarea{
+        width:100%;padding:0.6rem;border-radius:8px;border:1px solid rgba(10,10,10,0.06);font-size:0.95rem
+      }
+      .form-row{display:grid;grid-template-columns:1fr 1fr;gap:0.6rem}
+      .form-message{background: #e6fff9;border-left:4px solid var(--accent);padding:0.85rem;border-radius:8px;color:var(--accent-dark);display:none}
+
+      /* Footer */
+      footer{padding:2rem 0;text-align:center;color:var(--muted);font-size:0.95rem}
+
+      /* Responsive adjustments */
+      @media (max-width: 900px){
+        .services-grid{grid-template-columns:repeat(2,1fr)}
+        .gallery-grid{grid-template-columns:repeat(3,1fr)}
+        .about{grid-template-columns:1fr}
+        .contact-wrap{grid-template-columns:1fr}
+      }
+      @media (max-width: 640px){
+        .hero{padding:2rem 0}
+        nav.main-nav{display:none}
+        .menu-btn{display:inline-flex}
+        .services-grid{grid-template-columns:1fr}
+        .gallery-grid{grid-template-columns:repeat(2,1fr)}
+      }
+
+      /* Mobile menu overlay */
+      .mobile-nav{position:fixed;inset:0;background:rgba(6,20,20,0.6);display:flex;align-items:flex-start;justify-content:flex-end;padding:1rem;visibility:hidden;opacity:0;transition:opacity 160ms}
+      .mobile-nav.open{visibility:visible;opacity:1}
+      .mobile-nav .panel{width:260px;background:var(--card);border-radius:12px;padding:1rem;box-shadow:var(--shadow)}
+      .mobile-nav .panel a{display:block;padding:0.6rem;border-radius:8px}
+
+      /* header scrolled shadow */
+      header.site-header.scrolled{box-shadow:0 6px 18px rgba(6,20,20,0.08)}

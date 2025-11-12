@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Clear Aligners — Dantice</title>
+    <meta name="description" content="Clear aligners: how they work, key features, treatment duration, costs, care tips, advantages and disadvantages." />
+    <link rel="canonical" href="https://example.com/aligners.html" />
+    <style>
+      /* Enhanced Dantice styling with modern header */
+      :root {
+        --bg: #f5fafc;
+        --bg-light: #eaf5f8;
+        --card: #ffffff;
+        --text: #0d2f34;
+        --text-light: #1a3a42;
+        --muted: #627377;
+        --muted-light: #8a9598;
+        --accent: #0aa6a6;
+        --accent-dark: #078a8a;
+        --accent-light: #5cc4c4;
+        --glass: rgba(255, 255, 255, 0.7);
+        --radius: 16px;
+        --radius-sm: 10px;
+        --max-width: 1140px;
+        --shadow: 0 8px 24px rgba(10, 20, 25, 0.08);
+        --shadow-sm: 0 2px 8px rgba(10, 20, 25, 0.04);
+        --shadow-lg: 0 20px 40px rgba(10, 166, 166, 0.12);
+        --shadow-xl: 0 24px 48px rgba(10, 20, 25, 0.14);
+        --gap: 1.5rem;
+        --transition: all 350ms cubic-bezier(0.34, 1.56, 0.64, 1);
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', system-ui, sans-serif;
+      }
+      * { box-sizing: border-box; }
+      html, body { height: 100%; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        line-height: 1.6;
+        scroll-behavior: smooth;
+      }
+      a { color: var(--accent); text-decoration: none; transition: var(--transition); }
+      a:hover { color: var(--accent-dark); }
+      img { max-width: 100%; display: block; }
+      h1, h2, h3, h4, h5, h6 { margin: 0; font-weight: 700; line-height: 1.2; letter-spacing: -0.02em; }
+      h1 { font-size: 3.2rem; color: var(--text); background: linear-gradient(135deg, var(--text) 0%, var(--accent-dark) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+      h2 { font-size: 1.8rem; color: var(--text); font-weight: 700; }
+      h3 { font-size: 1.1rem; color: var(--text-light); }
+      p { margin: 0 0 0.5rem 0; }
+      .wrap { max-width: var(--max-width); margin: 0 auto; padding: 1.5rem; width: 100%; }
+      header.site-header {
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        backdrop-filter: blur(12px);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(250, 253, 254, 0.82));
+        border-bottom: 1px solid rgba(10, 166, 166, 0.12);
+        width: 100%;
+        box-shadow: 0 2px 12px rgba(10, 20, 25, 0.06);
+      }
+      .site-header .bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.9rem 1.5rem;
+        max-width: var(--max-width);
+        margin: 0 auto;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.9rem;
+        font-weight: 800;
+        font-size: 1.25rem;
+        background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        letter-spacing: -0.5px;
+      }
+      .logo .mark {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 800;
+        font-size: 1.15rem;
+        box-shadow: 0 8px 20px rgba(10, 166, 166, 0.2);
+        position: relative;
+        overflow: hidden;
+      }
+      .logo .mark::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.2) 50%, transparent 70%);
+        animation: shimmer 3s infinite;
+      }
+      @keyframes shimmer {
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(100%); }
+      }
+      nav.main-nav {
+        display: flex;
+        gap: 0.3rem;
+        align-items: center;
+        margin-left: auto;
+        flex-wrap: nowrap; /* prevent wrapping to new lines */
+        white-space: nowrap; /* keep items on single line */
+        overflow-x: auto; /* allow horizontal scroll on small screens */
+        -webkit-overflow-scrolling: touch;
+      }
+      nav.main-nav a {
+        padding: 0.65rem 1rem;
+        border-radius: var(--radius-sm);
+        color: var(--text-light);
+        font-weight: 500;
+        font-size: 0.95rem;
+        transition: var(--transition);
+        position: relative;
+        overflow: hidden;
+      }
+      nav.main-nav a::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(10, 166, 166, 0.1), transparent);
+        transition: left 500ms ease;
+      }
+      nav.main-nav a:hover::before {
+        left: 100%;
+      }
+      nav.main-nav a:hover, nav.main-nav a:focus {
+        background: linear-gradient(135deg, rgba(10, 166, 166, 0.08), rgba(10, 166, 166, 0.04));
+        color: var(--accent-dark);
+      }
+      .menu-btn {
+        display: none;
+        background: transparent;
+        border: 0;
+        padding: 8px;
+        border-radius: var(--radius-sm);
+        cursor: pointer;
+        color: var(--text);
+        transition: var(--transition);
+      }
+      .menu-btn:hover { background: rgba(10, 166, 166, 0.08); }
+      .menu-btn svg { width: 24px; height: 24px; }
+      header.site-header.scrolled {
+        box-shadow: 0 4px 16px rgba(10, 20, 25, 0.1);
+      }
+
+      /* Content styling */
+      main { padding: 2rem 0; }
+      main > .wrap { max-width: 900px; }
+      .kicker {
+        display: inline-block;
+        background: linear-gradient(135deg, rgba(10, 166, 166, 0.15), rgba(10, 166, 166, 0.08));
+        color: var(--accent-dark);
+        padding: 8px 14px;
+        border-radius: 999px;
+        font-weight: 700;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        width: fit-content;
+        border: 1px solid rgba(10, 166, 166, 0.2);
+        box-shadow: 0 4px 12px rgba(10, 166, 166, 0.08);
+      }
+      .lead {
+        color: var(--muted);
+        margin: 1rem 0 1.5rem;
+        font-size: 1.05rem;
+        line-height: 1.8;
+      }
+      section { margin: 2rem 0; }
+      h2 { margin: 1.5rem 0 0.75rem; font-size: 1.5rem; }
+      h3 { font-size: 1.1rem; }
+      ul, ol { margin: 0.5rem 0 0.5rem 1.5rem; }
+      li { margin: 0.4rem 0; }
+      table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+      td, th { padding: 0.75rem; border: 1px solid rgba(10, 166, 166, 0.1); text-align: left; }
+      th { background: linear-gradient(135deg, rgba(10, 166, 166, 0.08), rgba(10, 166, 166, 0.03)); font-weight: 700; }
+      .btn { display: inline-block; padding: 0.8rem 1.4rem; border-radius: var(--radius-sm); background: linear-gradient(135deg, var(--accent), var(--accent-dark)); color: white; font-weight: 600; text-decoration: none; transition: var(--transition); box-shadow: 0 4px 12px rgba(10, 166, 166, 0.15); }
+      .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(10, 166, 166, 0.22); }
+
+      /* Responsive */
+      @media (max-width: 900px) {
+        h1 { font-size: 2.4rem; }
+        h2 { font-size: 1.3rem; }
+        main > .wrap { padding: 1.5rem; }
+      }
+      @media (max-width: 560px) {
+        h1 { font-size: 1.8rem; }
+        h2 { font-size: 1.1rem; }
+        .site-header .bar { padding: 0.75rem 1rem; }
+        nav.main-nav { gap: 0.2rem; }
+        nav.main-nav a { padding: 0.5rem 0.75rem; font-size: 0.9rem; }
+        table { font-size: 0.9rem; }
+        td, th { padding: 0.5rem; }
+      }
+      @media (max-width: 640px) {
+        .menu-btn { display: block; }
+        nav.main-nav { display: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header / Navigation -->
+    <header class="site-header" role="banner">
+      <div class="bar">
+        <div class="logo" aria-hidden="false">
+          <div class="mark" aria-hidden="true">D</div>
+          <div>
+            <div style="font-weight:700">Dantice</div>
+            <div style="font-size:0.8rem;color:var(--muted);margin-top:2px">Dental & Oral Care</div>
+          </div>
+        </div>
+
+        <!-- Desktop nav -->
+        <nav class="main-nav" role="navigation" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="braces.html">Orthodontics</a>
+          <a href="aligners.html">Aligners</a>
+          <a href="dental-cleaning.html">Dental Cleaning</a>
+          <a href="scaling-polishing.html">Scaling & Polishing</a>
+          <a href="dental-implant.html">Dental Implant</a>
+          <a href="dental-bridge.html">Dental Bridge</a>
+          <a href="dentures.html">Dentures</a>
+        </nav>
+
+        <!-- Mobile menu button -->
+        <button class="menu-btn" aria-label="Open menu" aria-expanded="false" id="menuBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <main role="main">
+      <div class="wrap">
+        <span class="kicker">Clear Aligners</span>
+        <h1>What are Clear Aligners?</h1>
+        <p class="lead">Clear aligners are transparent, removable plastic trays that fit snugly over your teeth. They slowly move your teeth into the correct position — like braces, but without metal wires or brackets.</p>
+
+        <section aria-labelledby="features">
+          <h2 id="features">Key Features</h2>
+          <ul>
+            <li>Made from medical-grade clear plastic</li>
+            <li>Nearly invisible when worn</li>
+            <li>Removable (take them out while eating, brushing, or for special occasions)</li>
+            <li>Custom-made using 3D scanning and computer modelling</li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="how">
+          <h2 id="how">How They Work</h2>
+          <p>Your orthodontist scans your teeth and creates a 3D model. A series of aligners is made; each one slightly different. Every 2–3 weeks you switch to the next set, and your teeth move little by little.</p>
+        </section>
+
+        <section aria-labelledby="duration">
+          <h2 id="duration">Treatment Duration</h2>
+          <p>Usually <strong>6 to 18 months</strong>, depending on the severity of misalignment.</p>
+        </section>
+
+        <section aria-labelledby="cost">
+          <h2 id="cost">Cost in India (Approximate)</h2>
+          <table style="border-collapse:collapse;margin-top:0.5rem">
+            <thead>
+              <tr><th style="padding:8px;border:1px solid rgba(6,20,20,0.06);text-align:left">Type</th><th style="padding:8px;border:1px solid rgba(6,20,20,0.06);text-align:left">Price Range</th></tr>
+            </thead>
+            <tbody>
+              <tr><td style="padding:8px;border:1px solid rgba(6,20,20,0.06)">Local / Indian Brand Aligners</td><td style="padding:8px;border:1px solid rgba(6,20,20,0.06)">₹40,000 – ₹80,000</td></tr>
+              <tr><td style="padding:8px;border:1px solid rgba(6,20,20,0.06)">Invisalign (Premium Brand)</td><td style="padding:8px;border:1px solid rgba(6,20,20,0.06)">₹1,00,000 – ₹2,50,000+</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section aria-labelledby="care">
+          <h2 id="care">Care Tips</h2>
+          <ul>
+            <li>Clean aligners daily with mild soap and water (no hot water).</li>
+            <li>Remove while eating or drinking anything other than water.</li>
+            <li>Keep them in their case when not wearing.</li>
+            <li>Wear 20–22 hours daily for best results.</li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="advantages">
+          <h2 id="advantages">Advantages Over Braces</h2>
+          <ul>
+            <li>Invisible look</li>
+            <li>No metal wires or discomfort</li>
+            <li>Easier to clean teeth</li>
+            <li>You can eat normally since they’re removable</li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="disadvantages">
+          <h2 id="disadvantages">Disadvantages</h2>
+          <ul>
+            <li>Must wear consistently — otherwise results take longer</li>
+            <li>Not suitable for very severe misalignments</li>
+            <li>Generally more expensive than traditional braces</li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="next">
+          <h2 id="next">Want this on the site?</h2>
+          <p>If you'd like, I can add a "Book an Aligners Consultation" CTA that links to the contact form on the main page, or combine the Orthodontics and Aligners pages into a single section. Which would you prefer?</p>
+        </section>
+
+        <a class="btn" href="index.html#contact">Book Consultation</a>
+      </div>
+    </main>
+
+    <footer class="site-footer" style="background: linear-gradient(180deg, rgba(10,166,166,0.04), transparent); padding: 3rem 1.5rem; border-top: 1px solid rgba(10,166,166,0.06); color: var(--text-light); margin-top:2rem;">
+      <div class="wrap" style="max-width:var(--max-width);margin:0 auto;display:flex;gap:2rem;flex-wrap:wrap;align-items:flex-start;justify-content:space-between">
+        <div style="flex:1;min-width:220px">
+          <div style="display:flex;align-items:center;gap:0.75rem">
+            <div style="width:48px;height:48px;border-radius:10px;background:linear-gradient(180deg,var(--accent),var(--accent-dark));display:flex;align-items:center;justify-content:center;color:white;font-weight:700">D</div>
+            <div>
+              <div style="font-weight:700">Dantice</div>
+              <div class="muted" style="font-size:0.9rem">Gentle, modern dental care</div>
+            </div>
+          </div>
+          <p class="muted" style="margin-top:1rem;">123 Smile Street, City<br/>Mon − Fri: 8:00 − 17:00 • (555) 123-4567</p>
+        </div>
+
+        <nav style="flex:1;min-width:160px">
+          <h4 style="margin-bottom:0.5rem">Quick Links</h4>
+          <a href="index.html">Home</a><br/>
+          <a href="braces.html">Orthodontics</a><br/>
+          <a href="aligners.html">Aligners</a><br/>
+          <a href="dental-cleaning.html">Dental Cleaning</a><br/>
+          <a href="scaling-polishing.html">Scaling & Polishing</a><br/>
+          <a href="dental-implant.html">Dental Implant</a><br/>
+          <a href="dental-bridge.html">Dental Bridge</a><br/>
+          <a href="dentures.html">Dentures</a>
+        </nav>
+
+        <div style="flex:1;min-width:220px">
+          <h4 style="margin-bottom:0.5rem">Newsletter</h4>
+          <p class="muted" style="margin:0 0 0.5rem 0;font-size:0.95rem">Get occasional tips and offers.</p>
+          <form id="footerNews" style="display:flex;gap:0.5rem;align-items:center">
+            <input type="email" id="newsletterEmail" placeholder="you@example.com" style="flex:1;padding:0.6rem;border-radius:10px;border:1px solid rgba(10,20,25,0.06)" />
+            <button class="btn btn--primary" type="submit" style="padding:0.6rem 0.9rem;border-radius:10px">Subscribe</button>
+          </form>
+          <div id="footerNewsMsg" style="margin-top:0.5rem;font-size:0.9rem"></div>
+        </div>
+      </div>
+
+      <div style="margin-top:1.25rem;border-top:1px solid rgba(10,166,166,0.06);padding-top:1rem;text-align:center;font-size:0.9rem;color:var(--muted)">
+        <div>© <span id="year"></span> Dantice. All rights reserved.</div>
+      </div>
+    </footer>
+
+    <script>
+      (function(){
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileNav = document.getElementById('mobileNav');
+        function openMobile(){ if(mobileNav){ mobileNav.classList.add('open'); mobileNav.setAttribute('aria-hidden','false'); } if(menuBtn) menuBtn.setAttribute('aria-expanded','true'); }
+        function closeMobile(){ if(mobileNav){ mobileNav.classList.remove('open'); mobileNav.setAttribute('aria-hidden','true'); } if(menuBtn) menuBtn.setAttribute('aria-expanded','false'); }
+        if(menuBtn) menuBtn.addEventListener('click', ()=>{ if(mobileNav && mobileNav.classList.contains('open')) closeMobile(); else openMobile(); });
+        document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeMobile(); });
+
+        // Toggle header shadow when scrolling
+        const header = document.querySelector('.site-header');
+        function onScroll(){ if(window.scrollY > 12) header && header.classList.add('scrolled'); else header && header.classList.remove('scrolled'); }
+        window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+        // Populate year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Newsletter
+        const form = document.getElementById('footerNews');
+        if(form){
+          form.addEventListener('submit', function(e){
+            e.preventDefault();
+            const email = (document.getElementById('newsletterEmail') || {}).value || '';
+            const msg = document.getElementById('footerNewsMsg');
+            const ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+            if(!ok){ msg.style.color = '#b33'; msg.textContent = 'Please enter a valid email.'; return; }
+            msg.style.color = 'var(--accent-dark)'; msg.textContent = 'Thanks! You are subscribed.'; form.reset();
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>

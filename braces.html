@@ -102,7 +102,7 @@
         align-items: center;
         justify-content: space-between;
         padding: 0.9rem 1.5rem;
-        max-width: var(--max-width);
+        width: 100%;
         margin: 0 auto;
       }
       .logo {
@@ -198,7 +198,7 @@
 
       /* Content styling */
       main { padding: 2rem 0; }
-      main > .wrap { max-width: 900px; }
+      main > .wrap { width: 100%; }
       .kicker {
         display: inline-block;
         background: linear-gradient(135deg, rgba(10, 166, 166, 0.15), rgba(10, 166, 166, 0.08));
@@ -377,6 +377,30 @@
         <section aria-labelledby="want">
           <h2 id="want">Next Steps</h2>
           <p>If you'd like, I can integrate this content into the main site, add a small illustration, or provide a printable brochure version. Want me to add a "Book an Orthodontic Consultation" CTA/button that links to the contact form on the main site?</p>
+        </section>
+
+        <section aria-labelledby="gallery" style="margin:2rem 0">
+          <h2 id="gallery" style="margin-bottom:1rem">Gallery - Braces Treatment</h2>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1.5rem 0">
+            <div style="border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#e9f6f6,#f0fbfb);height:200px;display:flex;align-items:center;justify-content:center">
+              <img src="https://via.placeholder.com/400x300?text=Metal+Braces" alt="Metal braces on patient teeth showing orthodontic treatment" style="width:100%;height:100%;object-fit:cover"/>
+            </div>
+            <div style="border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#e9f6f6,#f0fbfb);height:200px;display:flex;align-items:center;justify-content:center">
+              <img src="https://via.placeholder.com/400x300?text=Ceramic+Braces" alt="Ceramic tooth-colored braces for aesthetic orthodontic treatment" style="width:100%;height:100%;object-fit:cover"/>
+            </div>
+            <div style="border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#e9f6f6,#f0fbfb);height:200px;display:flex;align-items:center;justify-content:center">
+              <img src="https://via.placeholder.com/400x300?text=Lingual+Braces" alt="Lingual braces invisible behind teeth" style="width:100%;height:100%;object-fit:cover"/>
+            </div>
+            <div style="border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#e9f6f6,#f0fbfb);height:200px;display:flex;align-items:center;justify-content:center">
+              <img src="https://via.placeholder.com/400x300?text=Braces+Adjustment" alt="Orthodontist adjusting and maintaining patient braces" style="width:100%;height:100%;object-fit:cover"/>
+            </div>
+            <div style="border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#e9f6f6,#f0fbfb);height:200px;display:flex;align-items:center;justify-content:center">
+              <img src="https://via.placeholder.com/400x300?text=Before+After" alt="Before and after smile transformation with braces treatment" style="width:100%;height:100%;object-fit:cover"/>
+            </div>
+            <div style="border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#e9f6f6,#f0fbfb);height:200px;display:flex;align-items:center;justify-content:center">
+              <img src="https://via.placeholder.com/400x300?text=Straight+Smile" alt="Perfect aligned teeth and beautiful smile after orthodontic treatment" style="width:100%;height:100%;object-fit:cover"/>
+            </div>
+          </div>
         </section>
 
         <a class="btn" href="index.html#contact">Book Consultation</a>

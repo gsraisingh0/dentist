@@ -94,7 +94,7 @@
         align-items: center;
         justify-content: space-between;
         padding: 0.9rem 1.5rem;
-        max-width: var(--max-width);
+        width: 100%;
         margin: 0 auto;
       }
       .logo {
@@ -190,7 +190,7 @@
 
       /* Content styling */
       main { padding: 2rem 0; }
-      main > .wrap { max-width: 900px; }
+      main > .wrap { width: 100%; }
       .kicker {
         display: inline-block;
         background: linear-gradient(135deg, rgba(10, 166, 166, 0.15), rgba(10, 166, 166, 0.08));
@@ -380,6 +380,30 @@
               <tr><td>Bone Health</td><td>Doesn’t prevent bone loss</td><td>Prevents bone loss</td></tr>
             </tbody>
           </table>
+        </section>
+
+        <section aria-labelledby="gallery" style="margin:2rem 0">
+          <h2 id="gallery" style="margin-bottom:1rem">Gallery - Dental Bridge Treatment</h2>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1.5rem 0">
+            <div style="border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#e9f6f6,#f0fbfb);height:200px;display:flex;align-items:center;justify-content:center">
+              <img src="https://via.placeholder.com/400x300?text=Missing+Tooth" alt="Missing tooth gap needing dental bridge restoration" style="width:100%;height:100%;object-fit:cover"/>
+            </div>
+            <div style="border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#e9f6f6,#f0fbfb);height:200px;display:flex;align-items:center;justify-content:center">
+              <img src="https://via.placeholder.com/400x300?text=Bridge+Design" alt="Custom-designed dental bridge showing crown and pontic" style="width:100%;height:100%;object-fit:cover"/>
+            </div>
+            <div style="border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#e9f6f6,#f0fbfb);height:200px;display:flex;align-items:center;justify-content:center">
+              <img src="https://via.placeholder.com/400x300?text=Tooth+Preparation" alt="Preparation of supporting teeth for bridge placement" style="width:100%;height:100%;object-fit:cover"/>
+            </div>
+            <div style="border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#e9f6f6,#f0fbfb);height:200px;display:flex;align-items:center;justify-content:center">
+              <img src="https://via.placeholder.com/400x300?text=Bridge+Placement" alt="Placing dental bridge restoration in patient mouth" style="width:100%;height:100%;object-fit:cover"/>
+            </div>
+            <div style="border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#e9f6f6,#f0fbfb);height:200px;display:flex;align-items:center;justify-content:center">
+              <img src="https://via.placeholder.com/400x300?text=Complete+Bridge" alt="Completed dental bridge looking like natural teeth" style="width:100%;height:100%;object-fit:cover"/>
+            </div>
+            <div style="border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#e9f6f6,#f0fbfb);height:200px;display:flex;align-items:center;justify-content:center">
+              <img src="https://via.placeholder.com/400x300?text=Beautiful+Smile" alt="Beautiful completed smile with dental bridge" style="width:100%;height:100%;object-fit:cover"/>
+            </div>
+          </div>
         </section>
 
         <a class="btn" href="index.html#contact">Book Consultation</a>

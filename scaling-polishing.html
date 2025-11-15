@@ -94,7 +94,7 @@
         align-items: center;
         justify-content: space-between;
         padding: 0.9rem 1.5rem;
-        max-width: var(--max-width);
+        width: 100%;
         margin: 0 auto;
       }
       .logo {
@@ -190,7 +190,7 @@
 
       /* Content styling */
       main { padding: 2rem 0; }
-      main > .wrap { max-width: 900px; }
+      main > .wrap { width: 100%; }
       .kicker {
         display: inline-block;
         background: linear-gradient(135deg, rgba(10, 166, 166, 0.15), rgba(10, 166, 166, 0.08));
@@ -350,7 +350,31 @@
           </ul>
         </section>
 
-        <a class="btn" href="index.html#contact">Book Appointment</a>
+        <section aria-labelledby="gallery" style="margin:2rem 0">
+          <h2 id="gallery" style="margin-bottom:1rem">Gallery - Scaling & Polishing Service</h2>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1.5rem 0">
+            <div style="border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#e9f6f6,#f0fbfb);height:200px;display:flex;align-items:center;justify-content:center">
+              <img src="https://via.placeholder.com/400x300?text=Tartar+Buildup" alt="Tartar and plaque buildup on teeth needing removal" style="width:100%;height:100%;object-fit:cover"/>
+            </div>
+            <div style="border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#e9f6f6,#f0fbfb);height:200px;display:flex;align-items:center;justify-content:center">
+              <img src="https://via.placeholder.com/400x300?text=Scaling+Process" alt="Scaling procedure removing tartar from tooth surface" style="width:100%;height:100%;object-fit:cover"/>
+            </div>
+            <div style="border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#e9f6f6,#f0fbfb);height:200px;display:flex;align-items:center;justify-content:center">
+              <img src="https://via.placeholder.com/400x300?text=Ultrasonic+Scaler" alt="Ultrasonic scaling equipment for deep cleaning" style="width:100%;height:100%;object-fit:cover"/>
+            </div>
+            <div style="border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#e9f6f6,#f0fbfb);height:200px;display:flex;align-items:center;justify-content:center">
+              <img src="https://via.placeholder.com/400x300?text=Polishing+Teeth" alt="Professional polishing making teeth smooth and shiny" style="width:100%;height:100%;object-fit:cover"/>
+            </div>
+            <div style="border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#e9f6f6,#f0fbfb);height:200px;display:flex;align-items:center;justify-content:center">
+              <img src="https://via.placeholder.com/400x300?text=Gum+Health" alt="Healthy gums after scaling and polishing treatment" style="width:100%;height:100%;object-fit:cover"/>
+            </div>
+            <div style="border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#e9f6f6,#f0fbfb);height:200px;display:flex;align-items:center;justify-content:center">
+              <img src="https://via.placeholder.com/400x300?text=Bright+Smile" alt="Bright clean smile after complete scaling and polishing" style="width:100%;height:100%;object-fit:cover"/>
+            </div>
+          </div>
+        </section>
+
+        <a class="btn" href="index.html#contact">Book Now</a>
       </div>
     </main>
 

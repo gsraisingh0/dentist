@@ -95,7 +95,7 @@
         align-items: center;
         justify-content: space-between;
         padding: 0.9rem 1.5rem;
-        max-width: var(--max-width);
+        width: 100%;
         margin: 0 auto;
       }
       .logo {
@@ -191,7 +191,7 @@
 
       /* Content styling */
       main { padding: 2rem 0; }
-      main > .wrap { max-width: 900px; }
+      main > .wrap { width: 100%; }
       .kicker {
         display: inline-block;
         background: linear-gradient(135deg, rgba(10, 166, 166, 0.15), rgba(10, 166, 166, 0.08));
@@ -346,6 +346,30 @@
         <section aria-labelledby="next">
           <h2 id="next">Want this on the site?</h2>
           <p>If you'd like, I can add a "Book an Aligners Consultation" CTA that links to the contact form on the main page, or combine the Orthodontics and Aligners pages into a single section. Which would you prefer?</p>
+        </section>
+
+        <section aria-labelledby="gallery" style="margin:2rem 0">
+          <h2 id="gallery" style="margin-bottom:1rem">Gallery - Clear Aligners Treatment</h2>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1.5rem 0">
+            <div style="border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#e9f6f6,#f0fbfb);height:200px;display:flex;align-items:center;justify-content:center">
+              <img src="https://via.placeholder.com/400x300?text=Clear+Aligners" alt="Transparent clear aligner trays for invisible teeth straightening" style="width:100%;height:100%;object-fit:cover"/>
+            </div>
+            <div style="border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#e9f6f6,#f0fbfb);height:200px;display:flex;align-items:center;justify-content:center">
+              <img src="https://via.placeholder.com/400x300?text=Aligner+Fit" alt="Custom-fitted clear aligner showing proper placement on teeth" style="width:100%;height:100%;object-fit:cover"/>
+            </div>
+            <div style="border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#e9f6f6,#f0fbfb);height:200px;display:flex;align-items:center;justify-content:center">
+              <img src="https://via.placeholder.com/400x300?text=Invisible+Treatment" alt="Almost invisible clear aligners showing cosmetic appeal" style="width:100%;height:100%;object-fit:cover"/>
+            </div>
+            <div style="border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#e9f6f6,#f0fbfb);height:200px;display:flex;align-items:center;justify-content:center">
+              <img src="https://via.placeholder.com/400x300?text=Treatment+Progress" alt="Progression of clear aligner treatment showing teeth movement" style="width:100%;height:100%;object-fit:cover"/>
+            </div>
+            <div style="border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#e9f6f6,#f0fbfb);height:200px;display:flex;align-items:center;justify-content:center">
+              <img src="https://via.placeholder.com/400x300?text=Removal" alt="Patient removing clear aligner for eating and cleaning" style="width:100%;height:100%;object-fit:cover"/>
+            </div>
+            <div style="border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#e9f6f6,#f0fbfb);height:200px;display:flex;align-items:center;justify-content:center">
+              <img src="https://via.placeholder.com/400x300?text=Final+Results" alt="Final beautiful smile result from clear aligner treatment" style="width:100%;height:100%;object-fit:cover"/>
+            </div>
+          </div>
         </section>
 
         <a class="btn" href="index.html#contact">Book Consultation</a>

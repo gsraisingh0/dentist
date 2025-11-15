@@ -94,7 +94,7 @@
         align-items: center;
         justify-content: space-between;
         padding: 0.9rem 1.5rem;
-        max-width: var(--max-width);
+        width: 100%;
         margin: 0 auto;
       }
       .logo {
@@ -190,7 +190,7 @@
 
       /* Content styling */
       main { padding: 2rem 0; }
-      main > .wrap { max-width: 900px; }
+      main > .wrap { width: 100%; }
       .kicker {
         display: inline-block;
         background: linear-gradient(135deg, rgba(10, 166, 166, 0.15), rgba(10, 166, 166, 0.08));
@@ -377,6 +377,30 @@
         <section aria-labelledby="when">
           <h2 id="when">When Should You Get Dentures?</h2>
           <p>You may need dentures if you have missing several or all teeth, difficulty chewing or speaking, sagging facial appearance, or gum irritation/tooth loss due to decay or injury.</p>
+        </section>
+
+        <section aria-labelledby="gallery" style="margin:2rem 0">
+          <h2 id="gallery" style="margin-bottom:1rem">Gallery - Dentures & Tooth Replacement</h2>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1.5rem 0">
+            <div style="border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#e9f6f6,#f0fbfb);height:200px;display:flex;align-items:center;justify-content:center">
+              <img src="https://via.placeholder.com/400x300?text=Complete+Dentures" alt="Complete upper and lower dentures" style="width:100%;height:100%;object-fit:cover"/>
+            </div>
+            <div style="border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#e9f6f6,#f0fbfb);height:200px;display:flex;align-items:center;justify-content:center">
+              <img src="https://via.placeholder.com/400x300?text=Partial+Dentures" alt="Partial denture showing tooth replacement" style="width:100%;height:100%;object-fit:cover"/>
+            </div>
+            <div style="border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#e9f6f6,#f0fbfb);height:200px;display:flex;align-items:center;justify-content:center">
+              <img src="https://via.placeholder.com/400x300?text=Denture+Fitting" alt="Dentist fitting and adjusting patient dentures" style="width:100%;height:100%;object-fit:cover"/>
+            </div>
+            <div style="border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#e9f6f6,#f0fbfb);height:200px;display:flex;align-items:center;justify-content:center">
+              <img src="https://via.placeholder.com/400x300?text=Natural+Look" alt="Natural-looking dentures that blend with facial features" style="width:100%;height:100%;object-fit:cover"/>
+            </div>
+            <div style="border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#e9f6f6,#f0fbfb);height:200px;display:flex;align-items:center;justify-content:center">
+              <img src="https://via.placeholder.com/400x300?text=Comfortable+Fit" alt="Patient enjoying comfort and fit of dentures" style="width:100%;height:100%;object-fit:cover"/>
+            </div>
+            <div style="border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#e9f6f6,#f0fbfb);height:200px;display:flex;align-items:center;justify-content:center">
+              <img src="https://via.placeholder.com/400x300?text=Confident+Smile" alt="Patient smiling confidently with dentures" style="width:100%;height:100%;object-fit:cover"/>
+            </div>
+          </div>
         </section>
 
   <a class="back" href="index.html">← Back to Dantice Dental Clinic home</a>

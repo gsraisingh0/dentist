@@ -350,6 +350,21 @@
       section { margin: 2rem 0; }
       h2 { margin: 1.5rem 0 0.75rem; font-size: 1.5rem; }
       h3 { font-size: 1.1rem; }
+      /* Hero layout: content left, image right */
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: center;
+      }
+      .hero-content .kicker { margin-bottom: 0.75rem; }
+      .hero-content h1 { font-size: 2.4rem; margin-bottom: 0.75rem; }
+      .hero-content .lead { font-size: 1.05rem; margin-bottom: 1rem; }
+      .hero-image img { width: 100%; border-radius: 12px; box-shadow: var(--shadow-lg); display:block; }
+      @media (max-width: 800px) {
+        .hero-grid { grid-template-columns: 1fr; gap: 1rem; }
+        .hero-content h1 { font-size: 1.6rem; }
+      }
       ul, ol { margin: 0.5rem 0 0.5rem 1.5rem; }
       li { margin: 0.4rem 0; }
       table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
@@ -625,9 +640,19 @@
       </header>
 
       <main role="main" aria-labelledby="pageTitle">
-        <span class="kicker">Dental Bridge</span>
-        <h1 id="pageTitle">Advanced Dental Bridge Treatment in Delhi for Natural-Looking Smiles</h1>
-        <p class="lead">A dental bridge is a fixed (non-removable) dental restoration used to replace one or more missing teeth. It literally “bridges” the gap between two teeth by attaching an artificial tooth (called a pontic) to the natural teeth or implants on either side.</p>
+        <section class="content-card" aria-labelledby="pageTitle">
+          <div class="hero-grid">
+            <div class="hero-content">
+              <span class="kicker">Dental Bridge</span>
+              <h1 id="pageTitle">Advanced Dental Bridge Treatment in Delhi for Natural-Looking Smiles</h1>
+              <p class="lead">A dental bridge is a fixed (non-removable) dental restoration used to replace one or more missing teeth. It literally “bridges” the gap between two teeth by attaching an artificial tooth (called a pontic) to the natural teeth or implants on either side.</p>
+              <a class="btn" href="index.html#contact">Book Consultation</a>
+            </div>
+            <div class="hero-image" aria-hidden="false">
+              <img src="Dental Bridge/16f22b160be25ab33b02bb18193537d0.jpg" alt="Dental bridge treatment" onerror="this.onerror=null;this.src='https://via.placeholder.com/700x450?text=Dental+Bridge'">
+            </div>
+          </div>
+        </section>
 
         <section class="content-card" aria-labelledby="parts">
           <h2 id="parts">Parts of a Dental Bridge</h2>
@@ -726,17 +751,143 @@
           </table>
         </section>
 
+        <section class="content-card" aria-labelledby="bridge-vs-implant">
+          <h2 id="bridge-vs-implant">Dental Bridge vs Implant: Cost, Types, Problems & Which Is Better in India</h2>
+          <p>Missing teeth can affect your smile, chewing ability, and confidence. Two common solutions are dental bridges and dental implants. This guide compares both options, including costs in India, types, durability, pain, and how they compare with dentures.</p>
+
+          <h3>What Is a Dental Bridge?</h3>
+          <p>A dental bridge is a fixed restoration used to replace one or more missing teeth by anchoring an artificial tooth (pontic) to adjacent natural teeth or crowns.</p>
+
+          <h3>Is a Dental Bridge Permanent?</h3>
+          <ul>
+            <li>Dental bridges are long-lasting but not always permanent.</li>
+            <li>Average lifespan: 8–15 years.</li>
+            <li>With good oral hygiene, some bridges last longer.</li>
+          </ul>
+
+          <h3>Types of Dental Bridges and Cost in India</h3>
+          <ul>
+            <li><strong>Traditional Dental Bridge:</strong> Most common; uses crowns on adjacent teeth. Cost: ₹8,000 – ₹25,000 per tooth.</li>
+            <li><strong>Cantilever Bridge:</strong> Supported by only one adjacent tooth. Cost: ₹10,000 – ₹20,000.</li>
+            <li><strong>Maryland (Resin-Bonded) Bridge:</strong> Metal or ceramic wings bonded behind teeth; common for front teeth. Cost: ₹6,000 – ₹15,000.</li>
+            <li><strong>Removable Dental Bridge:</strong> Can be removed for cleaning; less stable. Cost: ₹5,000 – ₹12,000.</li>
+          </ul>
+
+          <h3>Single Tooth Bridge Cost in India</h3>
+          <ul>
+            <li>1-tooth bridge: ₹8,000 – ₹20,000</li>
+            <li>2-tooth bridge: ₹16,000 – ₹40,000</li>
+            <li>3-tooth bridge: ₹25,000 – ₹60,000</li>
+          </ul>
+
+          <h3>Crown / Bridge Teeth Price</h3>
+          <ul>
+            <li>Metal crown: ₹2,000 – ₹4,000</li>
+            <li>PFM crown: ₹3,000 – ₹6,000</li>
+            <li>Zirconia crown: ₹8,000 – ₹15,000</li>
+          </ul>
+
+          <h3>Dental Bridge Problems (Disadvantages)</h3>
+          <ul>
+            <li>Requires trimming healthy adjacent teeth.</li>
+            <li>Risk of decay under crowns if hygiene is poor.</li>
+            <li>Possible gum problems without proper care.</li>
+            <li>Does not preserve jawbone the way implants do.</li>
+          </ul>
+
+          <h3>Dental Bridge for Front Teeth (Anterior)</h3>
+          <p>For anterior teeth, appearance is key. Ceramic or zirconia materials are preferred; Maryland bridges are commonly used for minimally invasive replacement.</p>
+
+          <h3>Dental Bridge vs Implant — Cost Comparison (India)</h3>
+          <table aria-label="Bridge vs Implant Cost" style="margin:0.75rem 0">
+            <tr><th>Treatment</th><th>Approx. Cost (India)</th></tr>
+            <tr><td>Dental Bridge</td><td>₹8,000 – ₹25,000 per tooth</td></tr>
+            <tr><td>Dental Implant</td><td>₹25,000 – ₹60,000 per tooth</td></tr>
+          </table>
+
+          <h3>3-Tooth Implant Bridge Cost</h3>
+          <p>Implant-supported bridge (2 implants + 3 crowns): ₹90,000 – ₹1,80,000 (approx.).</p>
+
+          <h3>Pros & Cons</h3>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:0.75rem">
+            <div>
+              <h4>Dental Bridge — Pros</h4>
+              <ul>
+                <li>Lower cost</li>
+                <li>Faster treatment</li>
+                <li>No surgery required</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Dental Bridge — Cons</h4>
+              <ul>
+                <li>Damages healthy adjacent teeth</li>
+                <li>Limited lifespan</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Dental Implant — Pros</h4>
+              <ul>
+                <li>Permanent solution</li>
+                <li>Preserves jawbone</li>
+                <li>Looks and feels natural</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Dental Implant — Cons</h4>
+              <ul>
+                <li>Higher cost</li>
+                <li>Requires surgery</li>
+                <li>Longer treatment time</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3>Pain: Bridge vs Implant</h3>
+          <p>Bridges cause minimal discomfort. Implants involve surgery and mild post-op pain, usually manageable with medication. Implant pain is temporary; bridges are generally almost painless.</p>
+
+          <h3>Dental Bridge vs Dentures</h3>
+          <table aria-label="Bridge vs Dentures" style="margin:0.75rem 0">
+            <tr><th>Feature</th><th>Dental Bridge</th><th>Dentures</th></tr>
+            <tr><td>Stability</td><td>Fixed</td><td>Removable</td></tr>
+            <tr><td>Comfort</td><td>High</td><td>Moderate</td></tr>
+            <tr><td>Cost</td><td>Medium</td><td>Low</td></tr>
+            <tr><td>Appearance</td><td>Natural</td><td>Less natural</td></tr>
+          </table>
+
+          <h3>Which Is Best?</h3>
+          <ul>
+            <li>Single missing tooth: implant or single-tooth bridge.</li>
+            <li>Multiple missing teeth: bridge or implant-supported bridge.</li>
+            <li>Low budget: dentures.</li>
+            <li>Long-term solution and bone preservation: dental implant.</li>
+          </ul>
+
+          <h3>Dental Bridge Cost Without Insurance (India)</h3>
+          <p>Most dental treatments in India are out-of-pocket. Typical ranges:</p>
+          <ul>
+            <li>Single-tooth bridge: ₹8,000 – ₹20,000</li>
+            <li>3-tooth bridge: ₹25,000 – ₹60,000</li>
+          </ul>
+
+          <h3>Public Opinion Summary</h3>
+          <p>Common patient viewpoints: implants offer better long-term value; bridges are good for budget-conscious or quick fixes. Dentists often recommend implants when bone health matters.</p>
+
+          <h3>Conclusion</h3>
+          <p>Choose a dental bridge if you want a quick, affordable solution or if adjacent teeth already need crowns. Choose a dental implant if you prefer a permanent, natural solution and want to preserve bone. Final choice depends on budget, bone health, and your dentist's advice.</p>
+        </section>
+
         <section class="content-card" aria-labelledby="gallery" style="margin:2rem 0">
           <h2 id="gallery" style="margin-bottom:1rem">Gallery - Dental Bridge Treatment</h2>
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1.5rem 0">
             <div style="border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#e9f6f6,#f0fbfb);height:200px;display:flex;align-items:center;justify-content:center">
-              <img src="https://via.placeholder.com/400x300?text=Missing+Tooth" alt="Missing tooth gap needing dental bridge restoration" style="width:100%;height:100%;object-fit:cover"/>
+              <img src="Dental Bridge/16f22b160be25ab33b02bb18193537d0.jpg" alt="Missing tooth gap needing dental bridge restoration" style="width:100%;height:100%;object-fit:cover"/>
             </div>
             <div style="border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#e9f6f6,#f0fbfb);height:200px;display:flex;align-items:center;justify-content:center">
-              <img src="https://via.placeholder.com/400x300?text=Bridge+Design" alt="Custom-designed dental bridge showing crown and pontic" style="width:100%;height:100%;object-fit:cover"/>
+              <img src="Dental Bridge/Dental Bridge image 1.jpg" alt="Custom-designed dental bridge showing crown and pontic" style="width:100%;height:100%;object-fit:cover"/>
             </div>
             <div style="border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#e9f6f6,#f0fbfb);height:200px;display:flex;align-items:center;justify-content:center">
-              <img src="https://via.placeholder.com/400x300?text=Tooth+Preparation" alt="Preparation of supporting teeth for bridge placement" style="width:100%;height:100%;object-fit:cover"/>
+              <img src="Dental Bridge/Dental Bridge image 2.jpg" alt="Preparation of supporting teeth for bridge placement" style="width:100%;height:100%;object-fit:cover"/>
             </div>
             <div style="border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#e9f6f6,#f0fbfb);height:200px;display:flex;align-items:center;justify-content:center">
               <img src="https://via.placeholder.com/400x300?text=Bridge+Placement" alt="Placing dental bridge restoration in patient mouth" style="width:100%;height:100%;object-fit:cover"/>

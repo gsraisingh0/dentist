@@ -507,6 +507,34 @@
       [data-theme="dark"] .info-item {
         background: linear-gradient(135deg, rgba(10, 166, 166, 0.08), transparent);
       }
+      /* Quick cards layout (uniform heights and tidy grid) */
+      .quick-cards {
+        display: grid;
+        grid-template-columns: 1fr; /* stacked full-width cards like the example */
+        gap: 1.5rem;
+        margin: 1.5rem 0;
+      }
+      .quick-cards .content-card {
+        margin: 0; /* remove extra vertical margin inside grid */
+        padding: 2rem; /* match larger detailed card padding */
+        min-height: 160px;
+        border-radius: 12px;
+        box-shadow: var(--shadow-lg);
+      }
+      .quick-cards .content-card h3 {
+        margin: 0 0 0.6rem 0;
+        color: var(--accent-dark);
+        font-size: 1.02rem;
+      }
+      .quick-cards .content-card ul,
+      .quick-cards .content-card ol {
+        margin-left: 1rem;
+      }
+      .quick-cards .content-card .card-actions {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: flex-end;
+      }
       /* Hero section responsive */
       .hero-section {
         display: grid;
@@ -726,6 +754,309 @@
           </div>
           <div style="border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-lg); height: 100%;">
             <img src="Dental Cleaning/Dental Cleaning 7.jpg" alt="Professional dental cleaning procedure at Dantice Dental Clinic" style="width:100%; height:100%; object-fit:cover; min-height:420px; display:block;"/>
+          </div>
+        </section>
+
+        <!-- Quick Info Cards: What / Why / Types / Pain / Time -->
+        <div class="quick-cards">
+          <section class="content-card" aria-labelledby="what-is-cleaning">
+            <h3 id="what-is-cleaning">What Is Dental Cleaning?</h3>
+            <p>Dental cleaning is a professional procedure performed by a dentist or dental hygienist. It involves removing plaque, hardened deposits (tartar or calculus), and stains from the teeth.</p>
+            <p>Daily brushing and flossing help maintain oral hygiene, but dental cleaning removes hardened plaque that cannot be removed by a toothbrush alone.</p>
+            <div class="card-actions">
+              <a class="btn" href="dental-cleaning-more.html" target="" rel="noopener">View More</a>
+            </div>
+          </section>
+
+          <section class="content-card" aria-labelledby="why-cleaning">
+            <h3 id="why-cleaning">Why Is Dental Cleaning Important?</h3>
+            <p>Dental cleaning is essential for maintaining healthy teeth and gums. Key benefits include:</p>
+            <ul>
+              <li>Helps prevent gum disease (gingivitis)</li>
+              <li>Reduces bad breath (halitosis)</li>
+              <li>Makes teeth look cleaner and shinier</li>
+              <li>Lowers the risk of cavities and tooth loss</li>
+              <li>Improves overall oral health</li>
+            </ul>
+            <div class="card-actions">
+              <a class="btn" href="dental-cleaning-why.html" target="" rel="noopener">View More</a>
+            </div>
+          </section>
+
+          <section class="content-card" aria-labelledby="types-cleaning-1">
+            <h3 id="types-cleaning-1">Types of Dental Cleaning</h3>
+            <ol>
+              <li><strong>Regular / Prophylaxis Cleaning</strong> — For people with healthy gums; recommended once every 6 months. Includes removal of plaque and tartar, polishing, and light stain removal.</li>
+              <li><strong>Scaling and Root Planing (Deep Cleaning)</strong> — For gum problems (bleeding, swelling, periodontitis). Cleans below the gum line and smooths roots; local anaesthesia may be required.</li>
+            </ol>
+            <div class="card-actions">
+              <a class="btn" href="dental-cleaning-regular.html" target="" rel="noopener">View More</a>
+            </div>
+          </section>
+
+          <section class="content-card" aria-labelledby="types-cleaning-2">
+            <h3 id="types-cleaning-2">More Types of Cleaning</h3>
+            <ol start="3">
+              <li><strong>Gross Debridement Cleaning</strong> — For heavy tartar buildup when long overdue; removes large deposits so a proper exam and further cleaning can follow.</li>
+              <li><strong>Periodontal Maintenance Cleaning</strong> — After gum disease treatment; done every 3–4 months to prevent recurrence and maintain gum health.</li>
+            </ol>
+            <div class="card-actions">
+              <a class="btn" href="dental-cleaning-deep.html" target="" rel="noopener">View More</a>
+            </div>
+          </section>
+
+          <section class="content-card" aria-labelledby="pain-cleaning">
+            <h3 id="pain-cleaning">Is Dental Cleaning Painful?</h3>
+            <p>Regular cleaning is usually painless. Deep cleaning may cause mild discomfort; people with sensitive teeth can experience slight pain. Dentists can use local anaesthesia when needed.</p>
+            <div class="card-actions">
+              <a class="btn" href="dental-cleaning-painful.html" target="" rel="noopener">View More</a>
+            </div>
+          </section>
+
+          <section class="content-card" aria-labelledby="time-cleaning">
+            <h3 id="time-cleaning">How Long Does Dental Cleaning Take?</h3>
+            <p><strong>Regular dental cleaning:</strong> 30–45 minutes.</p>
+            <p><strong>Deep cleaning:</strong> 1–2 sessions depending on severity.</p>
+            <div class="card-actions">
+              <a class="btn" href="dental-cleaning-time.html" target="" rel="noopener">View More</a>
+            </div>
+          </section>
+        </div>
+
+        <!-- Why Is Dental Cleaning Important -->
+        <section class="content-card" aria-labelledby="importance">
+          <h2 id="importance">Why Is Dental Cleaning Important?</h2>
+          <p>Regular professional dental cleaning is one of the most critical pillars of preventive oral health. While daily brushing and flossing are essential, they cannot remove hardened tartar (calculus) that bonds to your teeth. Here's why professional cleaning is non-negotiable:</p>
+          <div class="info-list">
+            <div class="info-item"><strong>Prevents Gum Disease:</strong> Tartar buildup triggers inflammation, leading to gingivitis and periodontitis (gum disease), which are major causes of tooth loss in adults.</div>
+            <div class="info-item"><strong>Eliminates Hidden Bacteria:</strong> Bacteria hidden in tartar and plaque cause cavities, bad breath, and infection. Professional cleaning removes these completely.</div>
+            <div class="info-item"><strong>Early Detection of Serious Issues:</strong> During cleaning, dentists spot cavities, oral cancer signs, gum recession, and bone loss—catching diseases before they become severe.</div>
+            <div class="info-item"><strong>Boosts Overall Health:</strong> Oral bacteria are linked to heart disease, diabetes complications, stroke, and respiratory infections. Keeping teeth clean reduces systemic health risks.</div>
+            <div class="info-item"><strong>Saves Money Long-Term:</strong> A ₹1,500 cleaning every 6 months is far cheaper than treating gum disease (₹5,000+), root canals (₹8,000–12,000), or implants (₹30,000+).</div>
+          </div>
+          <a href="why-dental-cleaning-important.html" class="btn">View More</a>
+        </section>
+
+        <!-- Routine Dental Cleaning -->
+        <section class="content-card" aria-labelledby="routine">
+          <h2 id="routine">Routine Dental Cleaning (Scaling & Polishing)</h2>
+          <p><strong>Best for:</strong> Patients with healthy gums and minimal tartar buildup (recommended every 6 months)</p>
+          <h3>What Happens During Routine Cleaning:</h3>
+          <ul>
+            <li><strong>Visual Examination:</strong> Dentist checks for cavities, gum health, and signs of disease</li>
+            <li><strong>Ultrasonic Scaling:</strong> Vibrating tool loosens and removes tartar from tooth surfaces and just below the gum line (painless for most)</li>
+            <li><strong>Hand Scaling (if needed):</strong> Manual instruments clean areas the ultrasonic scaler couldn't reach completely</li>
+            <li><strong>Suction & Removal:</strong> Saliva is suctioned, and loose debris is rinsed away</li>
+            <li><strong>Polishing:</strong> Rotating brush with minty-flavored cleaning paste smooths teeth and removes surface stains</li>
+            <li><strong>Professional Flossing:</strong> Dentist flosses between teeth to check for pockets and remove stubborn debris</li>
+            <li><strong>Fluoride Application (optional):</strong> Gel or varnish hardens enamel and prevents decay for 3–6 months</li>
+          </ul>
+          <p><strong>Duration:</strong> 30–45 minutes | <strong>Cost:</strong> ₹800–₹3,500 in Delhi</p>
+        </section>
+
+        <!-- Deep Dental Cleaning -->
+        <section class="content-card" aria-labelledby="deep">
+          <h2 id="deep">Deep Dental Cleaning (Scaling and Root Planing)</h2>
+          <p><strong>Best for:</strong> Patients with gum disease (gingivitis or periodontitis) showing signs like bleeding, swelling, or pockets deeper than 3mm</p>
+          <h3>What Makes It "Deep":</h3>
+          <ul>
+            <li><strong>Subgingival Scaling:</strong> Scaling tool goes deep below the gum line (up to 5–7mm) where routine cleaning can't reach</li>
+            <li><strong>Root Planing:</strong> Dentist smooths the root surfaces to remove tartar, bacteria, and toxins that irritate gums and cause bone loss</li>
+            <li><strong>Numbing Required:</strong> Local anesthesia is usually given for comfort before the procedure begins</li>
+            <li><strong>Multiple Sessions:</strong> Often done quadrant by quadrant (4 visits) rather than the entire mouth in one visit</li>
+            <li><strong>Antibiotic Rinse or Powder:</strong> Sometimes placed under gums to kill remaining bacteria</li>
+          </ul>
+          <p><strong>Duration:</strong> 45–90 minutes per quadrant | <strong>Cost:</strong> ₹2,000–₹6,000+ depending on severity</p>
+          <p style="margin-top: 1rem; padding: 1rem; background: linear-gradient(135deg, rgba(10, 166, 166, 0.03), transparent); border-radius: 10px;"><strong>📌 Post-Deep Cleaning Care:</strong> Expect mild soreness for 2–3 days. Use salt water rinses, take OTC pain relievers, and avoid crunchy foods.</p>
+        </section>
+
+        <!-- Gross Debridement Cleaning -->
+        <section class="content-card" aria-labelledby="debridement">
+          <h2 id="debridement">Gross Debridement Cleaning</h2>
+          <p><strong>Best for:</strong> Patients with severe tartar buildup, severe gum inflammation, or patients who haven't had cleaning in many years</p>
+          <h3>What Is Gross Debridement:</h3>
+          <p>Gross debridement is a preliminary "emergency" cleaning that quickly removes massive amounts of visible tartar and plaque so other procedures (like periodontal evaluation or X-rays) can be done effectively. It's NOT a substitute for proper deep cleaning.</p>
+          <h3>Key Differences:</h3>
+          <ul>
+            <li><strong>Aggressive Approach:</strong> Uses powerful ultrasonic scalers to blast away heavy calculus deposits</li>
+            <li><strong>Fast but Rough:</strong> Gets teeth quickly "clean enough" for diagnosis, but not as thorough as routine/deep cleaning</li>
+            <li><strong>Often Paired with Deep Cleaning:</strong> Usually followed by proper scaling and root planing in later sessions</li>
+            <li><strong>More Discomfort:</strong> Can cause temporary soreness, but numbness prevents severe pain during procedure</li>
+          </ul>
+          <p><strong>Cost:</strong> ₹1,500–₹3,000 (often included in deep cleaning package)</p>
+        </section>
+
+        <!-- Periodontal Maintenance Cleaning -->
+        <section class="content-card" aria-labelledby="periodontal">
+          <h2 id="periodontal">Periodontal Maintenance Cleaning</h2>
+          <p><strong>Best for:</strong> Patients with a history of gum disease who have completed deep cleaning treatment and need ongoing management</p>
+          <h3>What Is Periodontal Maintenance:</h3>
+          <p>Also called "perio maintenance" or "supportive periodontal therapy," this is a specialized cleaning performed 3–4 times per year (instead of the standard 2 times) for patients with gum disease. It combines elements of routine and deep cleaning.</p>
+          <h3>Key Features:</h3>
+          <ul>
+            <li><strong>More Frequent Visits:</strong> Preventive measure to stop gum disease from returning or worsening</li>
+            <li><strong>Subgingival Cleaning:</strong> Includes some scaling below the gum line, like deep cleaning</li>
+            <li><strong>Pocket Monitoring:</strong> Dentist measures gum pocket depths to track disease progression</li>
+            <li><strong>Targeted Focus:</strong> Emphasis on areas that showed disease or bone loss in past exams</li>
+            <li><strong>Advanced Techniques:</strong> May include laser therapy or antibiotic powders to control bacteria</li>
+          </ul>
+          <p><strong>Cost:</strong> ₹1,500–₹2,500 per visit (lower than deep cleaning, but more frequent)</p>
+          <p style="margin-top: 1rem; padding: 1rem; background: linear-gradient(135deg, rgba(10, 166, 166, 0.03), transparent); border-radius: 10px;"><strong>💡 Why It Matters:</strong> Studies show patients who skip perio maintenance have a 50% or higher chance of gum disease returning within 2 years.</p>
+        </section>
+
+        <!-- Air Polishing -->
+        <section class="content-card" aria-labelledby="airpolishing">
+          <h2 id="airpolishing">Air Polishing (Advanced Dental Cleaning)</h2>
+          <p><strong>Best for:</strong> Patients wanting superior stain removal, sensitive teeth, and the latest cleaning technology</p>
+          <h3>What Is Air Polishing:</h3>
+          <p>Air polishing uses a jet of air mixed with a fine powder (sodium bicarbonate or glycine-based) to blast away stains, plaque, and discoloration. It's gentler than traditional rubber-cup polishing and reaches areas traditional methods miss.</p>
+          <h3>How It Works:</h3>
+          <ul>
+            <li><strong>Jet Technology:</strong> High-velocity spray removes stains in seconds (not minutes like traditional polishing)</li>
+            <li><strong>Minimal Tooth Removal:</strong> Uses fine powder instead of abrasive paste, so less enamel is removed</li>
+            <li><strong>Ideal for Stain Removal:</strong> Highly effective on coffee, tea, red wine, and tobacco stains</li>
+            <li><strong>Comfortable:</strong> No heat, less vibration, and quieter than ultrasonic scalers</li>
+            <li><strong>Reaches Hard-to-Clean Areas:</strong> Gets into interproximal areas (between teeth) that regular polishing misses</li>
+            <li><strong>Treats Implants/Crowns:</strong> Doesn't damage dental work, making it ideal for patients with implants or veneers</li>
+          </ul>
+          <h3>Comparison with Traditional Polishing:</h3>
+          <table style="margin-top:1rem;border-collapse:collapse;width:100%">
+            <thead style="background:linear-gradient(135deg,rgba(10,166,166,0.08),rgba(10,166,166,0.03))">
+              <tr>
+                <th style="padding:12px;border:1px solid rgba(10,166,166,0.1);text-align:left">Feature</th>
+                <th style="padding:12px;border:1px solid rgba(10,166,166,0.1);text-align:left">Traditional Polishing</th>
+                <th style="padding:12px;border:1px solid rgba(10,166,166,0.1);text-align:left">Air Polishing</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding:12px;border:1px solid rgba(10,166,166,0.1)"><strong>Speed</strong></td>
+                <td style="padding:12px;border:1px solid rgba(10,166,166,0.1)">2–3 minutes per tooth</td>
+                <td style="padding:12px;border:1px solid rgba(10,166,166,0.1)">Seconds per tooth</td>
+              </tr>
+              <tr style="background:linear-gradient(135deg,rgba(10,166,166,0.02),transparent)">
+                <td style="padding:12px;border:1px solid rgba(10,166,166,0.1)"><strong>Stain Removal</strong></td>
+                <td style="padding:12px;border:1px solid rgba(10,166,166,0.1)">Moderate</td>
+                <td style="padding:12px;border:1px solid rgba(10,166,166,0.1)">Excellent</td>
+              </tr>
+              <tr>
+                <td style="padding:12px;border:1px solid rgba(10,166,166,0.1)"><strong>Enamel Abrasion</strong></td>
+                <td style="padding:12px;border:1px solid rgba(10,166,166,0.1)">Moderate</td>
+                <td style="padding:12px;border:1px solid rgba(10,166,166,0.1)">Minimal</td>
+              </tr>
+              <tr style="background:linear-gradient(135deg,rgba(10,166,166,0.02),transparent)">
+                <td style="padding:12px;border:1px solid rgba(10,166,166,0.1)"><strong>Comfort Level</strong></td>
+                <td style="padding:12px;border:1px solid rgba(10,166,166,0.1)">Good (heat & vibration)</td>
+                <td style="padding:12px;border:1px solid rgba(10,166,166,0.1)">Excellent (cool & quiet)</td>
+              </tr>
+              <tr>
+                <td style="padding:12px;border:1px solid rgba(10,166,166,0.1)"><strong>Safe for Veneers/Crowns</strong></td>
+                <td style="padding:12px;border:1px solid rgba(10,166,166,0.1)">Not ideal (may damage)</td>
+                <td style="padding:12px;border:1px solid rgba(10,166,166,0.1)">Yes, very safe</td>
+              </tr>
+              <tr style="background:linear-gradient(135deg,rgba(10,166,166,0.02),transparent)">
+                <td style="padding:12px;border:1px solid rgba(10,166,166,0.1)"><strong>Cost</strong></td>
+                <td style="padding:12px;border:1px solid rgba(10,166,166,0.1)">₹1,000–₹2,000</td>
+                <td style="padding:12px;border:1px solid rgba(10,166,166,0.1)">₹2,000–₹4,000</td>
+              </tr>
+            </tbody>
+          </table>
+          <p><strong>Duration:</strong> 30–45 minutes | <strong>Cost:</strong> ₹1,500–₹4,000 in Delhi</p>
+        </section>
+
+        <!-- How Often Dental Cleaning Should Be Done -->
+        <section class="content-card" aria-labelledby="howoften">
+          <h2 id="howoften">How Often Should Dental Cleaning Be Done?</h2>
+          <h3>Standard Recommendation:</h3>
+          <p style="font-size: 1.1rem; font-weight: 600; color: var(--accent-dark);">Every 6 months (twice per year) for most people</p>
+          <h3>Personalized Schedule Based on Your Risk:</h3>
+          <table style="margin-top:1rem;border-collapse:collapse;width:100%">
+            <thead style="background:linear-gradient(135deg,rgba(10,166,166,0.08),rgba(10,166,166,0.03))">
+              <tr>
+                <th style="padding:12px;border:1px solid rgba(10,166,166,0.1);text-align:left">Patient Type / Risk Level</th>
+                <th style="padding:12px;border:1px solid rgba(10,166,166,0.1);text-align:left">Recommended Frequency</th>
+                <th style="padding:12px;border:1px solid rgba(10,166,166,0.1);text-align:left">Reason</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding:12px;border:1px solid rgba(10,166,166,0.1)"><strong>Excellent Oral Health</strong> (Clean gums, no decay, excellent brushing)</td>
+                <td style="padding:12px;border:1px solid rgba(10,166,166,0.1)">Every 12 months</td>
+                <td style="padding:12px;border:1px solid rgba(10,166,166,0.1)">Lower risk; annual cleaning sufficient</td>
+              </tr>
+              <tr style="background:linear-gradient(135deg,rgba(10,166,166,0.02),transparent)">
+                <td style="padding:12px;border:1px solid rgba(10,166,166,0.1)"><strong>Good Oral Health</strong> (Occasional tartar, normal gums)</td>
+                <td style="padding:12px;border:1px solid rgba(10,166,166,0.1)">Every 6 months</td>
+                <td style="padding:12px;border:1px solid rgba(10,166,166,0.1)">Standard prevention schedule</td>
+              </tr>
+              <tr>
+                <td style="padding:12px;border:1px solid rgba(10,166,166,0.1)"><strong>Gum Disease / History of Gingivitis</strong></td>
+                <td style="padding:12px;border:1px solid rgba(10,166,166,0.1)">Every 3–4 months</td>
+                <td style="padding:12px;border:1px solid rgba(10,166,166,0.1)">Periodontal maintenance to prevent relapse</td>
+              </tr>
+              <tr style="background:linear-gradient(135deg,rgba(10,166,166,0.02),transparent)">
+                <td style="padding:12px;border:1px solid rgba(10,166,166,0.1)"><strong>Heavy Smokers / Tea/Coffee Drinkers</strong></td>
+                <td style="padding:12px;border:1px solid rgba(10,166,166,0.1)">Every 3–4 months</td>
+                <td style="padding:12px;border:1px solid rgba(10,166,166,0.1)">Quick stain & tartar buildup</td>
+              </tr>
+              <tr>
+                <td style="padding:12px;border:1px solid rgba(10,166,166,0.1)"><strong>Diabetes or Heart Disease</strong></td>
+                <td style="padding:12px;border:1px solid rgba(10,166,166,0.1)">Every 3–4 months</td>
+                <td style="padding:12px;border:1px solid rgba(10,166,166,0.1)">Higher infection risk; better oral health helps manage disease</td>
+              </tr>
+              <tr style="background:linear-gradient(135deg,rgba(10,166,166,0.02),transparent)">
+                <td style="padding:12px;border:1px solid rgba(10,166,166,0.1)"><strong>Pregnant or On Immunosuppressants</strong></td>
+                <td style="padding:12px;border:1px solid rgba(10,166,166,0.1)">Every 3–6 months</td>
+                <td style="padding:12px;border:1px solid rgba(10,166,166,0.1)">Hormonal changes or immune status affects oral health</td>
+              </tr>
+              <tr>
+                <td style="padding:12px;border:1px solid rgba(10,166,166,0.1)"><strong>Severe Periodontitis / Recent Treatment</strong></td>
+                <td style="padding:12px;border:1px solid rgba(10,166,166,0.1)">Every 2–3 months</td>
+                <td style="padding:12px;border:1px solid rgba(10,166,166,0.1)">Aggressive management to prevent tooth loss</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Benefits of Regular Cleaning -->
+        <section class="content-card" aria-labelledby="regularbenefits">
+          <h2 id="regularbenefits">Benefits of Regular Dental Cleaning</h2>
+          <div class="feature-grid">
+            <div class="feature-box">
+              <h3>🦷 Stronger Teeth</h3>
+              <p>Removes decay-causing bacteria and strengthens enamel with fluoride treatments</p>
+            </div>
+            <div class="feature-box">
+              <h3>😊 Brighter Smile</h3>
+              <p>Eliminates stains from coffee, wine, and tobacco for visibly whiter teeth</p>
+            </div>
+            <div class="feature-box">
+              <h3>💨 Fresh Breath</h3>
+              <p>Removes bacteria causing bad breath and provides long-lasting freshness</p>
+            </div>
+            <div class="feature-box">
+              <h3>❤️ Better Heart Health</h3>
+              <p>Lower oral bacteria reduces risk of heart disease, stroke, and inflammation</p>
+            </div>
+            <div class="feature-box">
+              <h3>💰 Saves Money</h3>
+              <p>Prevents expensive treatments like root canals (₹8,000+) and implants (₹30,000+)</p>
+            </div>
+            <div class="feature-box">
+              <h3>🎯 Early Detection</h3>
+              <p>Catch cavities, gum disease, and oral cancer before they become serious</p>
+            </div>
+            <div class="feature-box">
+              <h3>🦴 Prevents Bone Loss</h3>
+              <p>Stops periodontitis from destroying jawbone that supports teeth</p>
+            </div>
+            <div class="feature-box">
+              <h3>👨‍⚕️ Professional Assessment</h3>
+              <p>Get expert advice on brushing, flossing, diet, and oral health habits</p>
+            </div>
+          </div>
+          <div style="margin-top: 1.5rem; padding: 1.25rem; background: linear-gradient(135deg, rgba(10, 166, 166, 0.03), transparent); border-radius: 10px; border-left: 4px solid var(--accent);">
+            <p style="margin: 0; font-weight: 600; color: var(--text);"><strong>🌟 Long-Term Benefit:</strong> People who get regular cleanings retain their natural teeth 95% longer than those who don't, enjoying better quality of life, better nutrition, and higher confidence well into old age.</p>
           </div>
         </section>
 

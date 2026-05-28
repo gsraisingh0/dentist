@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index, follow" />
+    <title>Find Best Dentist in Delhi | Search by Name, Location & Speciality | Dantice Dental Clinic</title>
+    <meta name="description" content="Find best dentists in Delhi. Search doctors by name, location, speciality & experience. Dantice Dental Clinic provides complete dental services including implants, braces, aligners, and cosmetic dentistry." />
+    <link rel="canonical" href="https://dantice-dental.com/services.html" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta name="keywords" content="dentist Delhi, find dentist, best dentist near me, dental clinic search, orthodontist, implant specialist, cosmetic dentist" />
+    <style>
+      :root {
+        --bg: #f5fafc;
+        --bg-light: #eaf5f8;
+        --bg-accent: #f0f8ff;
+        --card: #ffffff;
+        --text: #0d2f34;
+        --text-light: #1a3a42;
+        --muted: #627377;
+        --muted-light: #8a9598;
+        --accent: #0aa6a6;
+        --accent-dark: #078a8a;
+        --accent-light: #5cc4c4;
+        --accent-vibrant: #00d9d9;
+        --glass: rgba(255, 255, 255, 0.7);
+        --radius: 16px;
+        --radius-sm: 10px;
+        --max-width: 1140px;
+        --shadow: 0 8px 24px rgba(10, 20, 25, 0.08);
+        --shadow-sm: 0 2px 8px rgba(10, 20, 25, 0.04);
+        --shadow-lg: 0 20px 40px rgba(10, 166, 166, 0.12);
+        --shadow-xl: 0 24px 48px rgba(10, 20, 25, 0.14);
+        --gap: 1.5rem;
+        --transition: all 350ms cubic-bezier(0.34, 1.56, 0.64, 1);
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', system-ui, sans-serif;
+      }
+
+      * { box-sizing: border-box; }
+      html, body { height: 100%; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        line-height: 1.6;
+        scroll-behavior: smooth;
+      }
+
+      a { color: var(--accent); text-decoration: none; transition: var(--transition); }
+      a:hover { color: var(--accent-dark); }
+      img { max-width: 100%; display: block; }
+
+      h1, h2, h3, h4, h5, h6 { margin: 0; font-weight: 700; line-height: 1.2; letter-spacing: -0.02em; }
+      h1 { font-size: 2.8rem; color: var(--text); margin-bottom: 0.5rem; }
+      h2 { font-size: 1.6rem; color: var(--text); font-weight: 700; margin-bottom: 1rem; }
+      h3 { font-size: 1.1rem; color: var(--text-light); }
+      p { margin: 0 0 0.5rem 0; }
+
+      .wrap { width: 100%; max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem; }
+      
+      header { padding: 1rem 0; border-bottom: 1px solid rgba(10, 166, 166, 0.1); }
+      header h1 { font-size: 1.5rem; }
+      header .subtitle { color: var(--muted); font-size: 1rem; }
+
+      /* Search Section Styling */
+      .search-section {
+        background: linear-gradient(135deg, rgba(10, 166, 166, 0.05) 0%, transparent 100%);
+        border: 1px solid rgba(10, 166, 166, 0.1);
+        border-radius: 12px;
+        padding: 2rem;
+        margin: 2rem 0;
+      }
+
+      .search-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 140px;
+        gap: 1.2rem;
+        align-items: end;
+      }
+
+      .search-field {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .search-field label {
+        font-weight: 700;
+        font-size: 0.85rem;
+        color: var(--text-light);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .search-field input,
+      .search-field select {
+        padding: 0.85rem 1rem;
+        border-radius: 8px;
+        border: 1.5px solid rgba(10, 166, 166, 0.2);
+        background: white;
+        font-size: 0.95rem;
+        font-family: inherit;
+        transition: all 300ms ease;
+      }
+
+      .search-field input:focus,
+      .search-field select:focus {
+        outline: none;
+        border-color: var(--accent);
+        box-shadow: 0 0 0 3px rgba(10, 166, 166, 0.1);
+      }
+
+      .btn-clear {
+        padding: 0.85rem 1.2rem;
+        border-radius: 8px;
+        border: 0;
+        background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+        color: white;
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 0.9rem;
+        transition: all 300ms ease;
+        height: fit-content;
+      }
+
+      .btn-clear:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(10, 166, 166, 0.3);
+      }
+
+      .result-count {
+        padding: 1rem;
+        background: linear-gradient(135deg, rgba(10, 166, 166, 0.08) 0%, rgba(0, 217, 217, 0.04) 100%);
+        border-left: 4px solid var(--accent);
+        border-radius: 6px;
+        margin: 1.5rem 0;
+        font-weight: 500;
+        color: var(--text-light);
+      }
+
+      /* Table Styling */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1.5rem;
+      }
+
+      thead {
+        background: linear-gradient(135deg, rgba(10, 166, 166, 0.1) 0%, rgba(10, 166, 166, 0.05) 100%);
+        border-bottom: 2px solid rgba(10, 166, 166, 0.2);
+      }
+
+      th {
+        padding: 1rem;
+        text-align: left;
+        font-weight: 700;
+        color: var(--text-light);
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 0.5px;
+      }
+
+      tbody tr {
+        border-bottom: 1px solid rgba(10, 166, 166, 0.08);
+        transition: all 300ms ease;
+      }
+
+      tbody tr:hover {
+        background: rgba(10, 166, 166, 0.04);
+      }
+
+      td {
+        padding: 1.2rem 1rem;
+        color: var(--text);
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+
+      td:first-child {
+        font-weight: 600;
+        color: var(--text-light);
+      }
+
+      .highlight {
+        background-color: rgba(255, 193, 7, 0.2);
+        padding: 0.2rem 0.4rem;
+        border-radius: 3px;
+      }
+
+      .badge {
+        display: inline-block;
+        padding: 0.3rem 0.8rem;
+        background: linear-gradient(135deg, rgba(10, 166, 166, 0.15) 0%, rgba(0, 217, 217, 0.08) 100%);
+        border: 1px solid rgba(10, 166, 166, 0.2);
+        color: var(--accent-dark);
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        margin: 0.3rem;
+      }
+
+      .no-results {
+        text-align: center;
+        padding: 3rem 1rem;
+        color: var(--muted);
+      }
+
+      .no-results h3 {
+        font-size: 1.3rem;
+        color: var(--text);
+        margin-bottom: 0.5rem;
+      }
+
+      @media (max-width: 1024px) {
+        .search-grid {
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: auto auto;
+        }
+        .btn-clear {
+          grid-column: 1 / -1;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .search-grid {
+          grid-template-columns: 1fr;
+        }
+        th, td {
+          padding: 0.75rem 0.5rem;
+          font-size: 0.85rem;
+        }
+      }
+
+      .footer-section {
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(10, 166, 166, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <h1>🏥 Find the Best Dentist in Delhi</h1>
+        <p class="subtitle">Search across multiple clinics and doctors by name, location, and speciality. Get experience, consultation fees, and ratings all in one place.</p>
+      </header>
+
+      <!-- Enhanced Search Section -->
+      <div class="search-section">
+        <div class="search-grid">
+          <div class="search-field">
+            <label for="searchName">👨‍⚕️ Doctor/Clinic Name</label>
+            <input id="searchName" type="text" placeholder="e.g., Dr. Karan Marya, Dental Roots..." />
+          </div>
+          <div class="search-field">
+            <label for="searchLocation">📍 Location/Area</label>
+            <input id="searchLocation" type="text" placeholder="e.g., Delhi, Dwarka, South Delhi..." />
+          </div>
+          <div class="search-field">
+            <label for="filterSpeciality">⚕️ Speciality</label>
+            <select id="filterSpeciality">
+              <option value="">All Specialities</option>
+              <option value="General">General Dentistry</option>
+              <option value="Implants">Implants & Dentures</option>
+              <option value="Cosmetic">Cosmetic Dentistry</option>
+              <option value="Orthodontics">Orthodontics</option>
+              <option value="Oral Surgery">Oral Surgery</option>
+            </select>
+          </div>
+          <button class="btn-clear" id="btnClear">🔄 Clear All</button>
+        </div>
+      </div>
+
+      <!-- Result Count -->
+      <div class="result-count" id="resultInfo">📋 Showing all doctors and clinics</div>
+
+      <!-- Doctor Directory Table -->
+      <table id="doctorTable">
+        <thead>
+          <tr>
+            <th>Clinic / Doctor Name</th>
+            <th>Location</th>
+            <th>Speciality / Experience</th>
+            <th>Details & Ratings</th>
+            <th>Source</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <tr>
+            <td><strong>Marya's Dental and Implant Centre</strong><br>Dr. Karan Marya</td>
+            <td>Greater Kailash Part 2, Delhi</td>
+            <td><span class="badge">Implants</span><span class="badge">Oral Surgery</span></td>
+            <td>42 years experience | Fee: ₹800 | Highly Experienced</td>
+            <td>Practo</td>
+          </tr>
+
+          <tr>
+            <td><strong>Dr. Sahni's Dental Clinic</strong><br>Dr. Radhika Sahni</td>
+            <td>New Friends Colony, Delhi</td>
+            <td><span class="badge">General</span><span class="badge">Cosmetic</span></td>
+            <td>29 years experience | Fee: ₹1000 | Lady Dentist</td>
+            <td>Practo</td>
+          </tr>
+
+          <tr>
+            <td><strong>The Dental Roots</strong><br>Dr. Dheeraj Setia</td>
+            <td>Panchsheel Park, Delhi</td>
+            <td><span class="badge">General</span><span class="badge">Implants</span></td>
+            <td>28 years experience | Fee: ₹500 | Premium Clinic</td>
+            <td>Practo</td>
+          </tr>
+
+          <tr>
+            <td><strong>Matrix Dental & Skin Lounge</strong><br>Dr. Sourabh Nagpal</td>
+            <td>Vasant Vihar, Delhi</td>
+            <td><span class="badge">Cosmetic</span><span class="badge">General</span></td>
+            <td>20 years experience | Premium Services | Multi-specialist</td>
+            <td>Practo</td>
+          </tr>
+
+          <tr>
+            <td><strong>Dr. Ekta Narula's Dental Care Centre</strong><br>Dr. Ekta Narula</td>
+            <td>New Rajendra Nagar, Central Delhi</td>
+            <td><span class="badge">General</span><span class="badge">Pediatric</span></td>
+            <td>27 years experience | Lady Dentist | Family Friendly</td>
+            <td>Practo</td>
+          </tr>
+
+          <tr>
+            <td><strong>BLK-Max Super Speciality Hospital</strong><br>Dr. Neetu Kamra & Team</td>
+            <td>Pusa Road, Delhi</td>
+            <td><span class="badge">Oral Surgery</span><span class="badge">General</span></td>
+            <td>Hospital Dental Department | Multiple Specialists</td>
+            <td>Justdial</td>
+          </tr>
+
+          <tr>
+            <td><strong>Arora's Dental Clinic</strong><br>Dr. Dimple Arora</td>
+            <td>Ashok Vihar, Delhi</td>
+            <td><span class="badge">General</span><span class="badge">Cosmetic</span></td>
+            <td>28 years experience | Lady Dentist | Affordable</td>
+            <td>Practo</td>
+          </tr>
+
+          <tr>
+            <td><strong>Pearl White Dental Clinic</strong><br>Dr. Sandeep Singh</td>
+            <td>Connaught Place, New Delhi</td>
+            <td><span class="badge">General</span><span class="badge">Cosmetic</span></td>
+            <td>Premium Location | Government Empaneled</td>
+            <td>NITRD</td>
+          </tr>
+
+          <tr>
+            <td><strong>OM Dental Clinic</strong><br>Dr. Gaurav Malhotra</br></td>
+            <td>Surajmal Vihar, Delhi</td>
+            <td><span class="badge">General</span><span class="badge">Implants</span></td>
+            <td>Empaneled with NITRD | Trusted Provider</td>
+            <td>NITRD</td>
+          </tr>
+
+          <tr>
+            <td><strong>Samadhan Dental & Gastro Clinic</strong><br>Dr. Radhika Sahni</td>
+            <td>Dwarka, Delhi</td>
+            <td><span class="badge">General</span><span class="badge">Cosmetic</span></td>
+            <td>Fee: ₹600-₹1500 | Lady Dentist | Multi-specialty</td>
+            <td>Practo</td>
+          </tr>
+
+          <tr>
+            <td><strong>Dant Arogyam - Best Dental Clinic</strong><br>Dental Team</td>
+            <td>Shri Ganganagar, Rajasthan</td>
+            <td><span class="badge">General</span><span class="badge">Implants</span></td>
+            <td>Phone: +91 95097 97095 | Quality Services</td>
+            <td>BharatiBiz</td>
+          </tr>
+
+          <tr>
+            <td><strong>Dr. Aditya Markanday Dental Practice</strong><br>Dr. Aditya Markanday</td>
+            <td>Sukhadianagar, Shri Ganganagar, Rajasthan</td>
+            <td><span class="badge">General</span></td>
+            <td>Phone: +91 94143 32266 | General Practice</td>
+            <td>BharatiBiz</td>
+          </tr>
+
+          <tr>
+            <td><strong>Kishanchand Aggarwal Dental & Multispeciality Centre</strong><br>Dr. Rahul Aggarwal</td>
+            <td>Setia Farm, Shri Ganganagar, Rajasthan</td>
+            <td><span class="badge">Implants</span><span class="badge">Oral Surgery</span></td>
+            <td>BDS from Maharaj Ganga Singh College | Advanced Services</td>
+            <td>DocIndia</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="footer-section">
+        <h3>How to Use This Directory:</h3>
+        <ul style="color: var(--muted); line-height: 1.8;">
+          <li><strong>Search by Name:</strong> Enter the doctor's name (e.g., "Dr. Karan Marya") or clinic name (e.g., "Dental Roots")</li>
+          <li><strong>Filter by Location:</strong> Type your city or area (e.g., "Delhi", "Dwarka", "South Delhi")</li>
+          <li><strong>Filter by Speciality:</strong> Select the type of dental service you need (General, Implants, Cosmetic, etc.)</li>
+          <li><strong>Compare Doctors:</strong> View experience, fees, ratings, and specialities all in one table</li>
+          <li><strong>Contact Information:</strong> Scroll through the table to find phone numbers and practice details</li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      // Enhanced Search and Filter Functionality
+      (function() {
+        const searchName = document.getElementById('searchName');
+        const searchLocation = document.getElementById('searchLocation');
+        const filterSpeciality = document.getElementById('filterSpeciality');
+        const btnClear = document.getElementById('btnClear');
+        const tableBody = document.getElementById('tableBody');
+        const resultInfo = document.getElementById('resultInfo');
+        const rows = Array.from(tableBody.querySelectorAll('tr'));
+
+        function performSearch() {
+          const nameQuery = searchName.value.toLowerCase().trim();
+          const locationQuery = searchLocation.value.toLowerCase().trim();
+          const specialityQuery = filterSpeciality.value.toLowerCase().trim();
+          let visibleCount = 0;
+
+          rows.forEach(row => {
+            const cells = row.querySelectorAll('td');
+            const name = cells[0].textContent.toLowerCase();
+            const location = cells[1].textContent.toLowerCase();
+            const speciality = cells[2].textContent.toLowerCase();
+            const details = cells[3].textContent.toLowerCase();
+
+            let isVisible = true;
+
+            if (nameQuery && !name.includes(nameQuery)) {
+              isVisible = false;
+            }
+            if (locationQuery && !location.includes(locationQuery)) {
+              isVisible = false;
+            }
+            if (specialityQuery && !speciality.includes(specialityQuery)) {
+              isVisible = false;
+            }
+
+            row.style.display = isVisible ? '' : 'none';
+            if (isVisible) visibleCount++;
+          });
+
+          // Update result count
+          if (visibleCount === 0) {
+            resultInfo.textContent = '❌ No doctors found. Try adjusting your search criteria.';
+            resultInfo.style.background = 'rgba(255, 107, 107, 0.1)';
+            resultInfo.style.borderLeftColor = '#ff6b6b';
+          } else if (visibleCount === rows.length) {
+            resultInfo.textContent = '📋 Showing all ' + rows.length + ' doctors and clinics';
+            resultInfo.style.background = 'linear-gradient(135deg, rgba(10, 166, 166, 0.08) 0%, rgba(0, 217, 217, 0.04) 100%)';
+            resultInfo.style.borderLeftColor = 'var(--accent)';
+          } else {
+            resultInfo.textContent = '✅ Found ' + visibleCount + ' matching doctor(s) | Total: ' + rows.length;
+            resultInfo.style.background = 'linear-gradient(135deg, rgba(10, 166, 166, 0.08) 0%, rgba(0, 217, 217, 0.04) 100%)';
+            resultInfo.style.borderLeftColor = 'var(--accent)';
+          }
+        }
+
+        // Event Listeners
+        searchName.addEventListener('input', performSearch);
+        searchLocation.addEventListener('input', performSearch);
+        filterSpeciality.addEventListener('change', performSearch);
+
+        btnClear.addEventListener('click', () => {
+          searchName.value = '';
+          searchLocation.value = '';
+          filterSpeciality.value = '';
+          performSearch();
+          searchName.focus();
+        });
+
+        // Initial load
+        performSearch();
+      })();
+    </script>
+  </body>
+</html>

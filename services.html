@@ -777,12 +777,28 @@
         <section aria-labelledby="clinic-list">
           <h2 id="clinic-list" style="margin-top:1.25rem">Clinic Directory</h2>
 
-          <div class="search-bar" style="display:flex;gap:0.6rem;align-items:center;margin:1rem 0 1.25rem 0;flex-wrap:wrap">
-            <label for="searchInput" style="position:absolute;left:-9999px;">Search clinics</label>
-            <input id="searchInput" type="search" placeholder="Search clinics, doctors, locations, fees, source..." aria-label="Search clinics" style="flex:1;min-width:200px;padding:0.7rem 0.9rem;border-radius:10px;border:1px solid rgba(10,166,166,0.12);box-shadow:0 6px 16px rgba(10,20,25,0.04)" />
-            <button id="clearSearch" type="button" style="padding:0.6rem 0.9rem;border-radius:10px;border:0;background:var(--accent);color:#fff;cursor:pointer">Clear</button>
-            <div id="resultCount" class="muted" aria-live="polite" style="margin-left:0.6rem">Showing all</div>
+          <div class="search-bar" style="display:grid;gap:1rem;margin:1.5rem 0 2rem 0;grid-template-columns:1fr 1fr 1fr 120px;align-items:end">
+            <div style="display:flex;flex-direction:column;gap:0.4rem">
+              <label for="searchInput" style="font-weight:600;font-size:0.9rem;color:var(--text-light)">Doctor or Clinic Name</label>
+              <input id="searchInput" type="search" placeholder="Enter name..." aria-label="Search by doctor or clinic name" style="width:100%;padding:0.8rem 1rem;border-radius:8px;border:1.5px solid rgba(10,166,166,0.2);font-size:0.95rem" />
+            </div>
+            <div style="display:flex;flex-direction:column;gap:0.4rem">
+              <label for="locationFilter" style="font-weight:600;font-size:0.9rem;color:var(--text-light)">Location</label>
+              <input id="locationFilter" type="search" placeholder="Enter location..." aria-label="Search by location" style="width:100%;padding:0.8rem 1rem;border-radius:8px;border:1.5px solid rgba(10,166,166,0.2);font-size:0.95rem" />
+            </div>
+            <div style="display:flex;flex-direction:column;gap:0.4rem">
+              <label for="specialityFilter" style="font-weight:600;font-size:0.9rem;color:var(--text-light)">Speciality</label>
+              <select id="specialityFilter" style="width:100%;padding:0.8rem 1rem;border-radius:8px;border:1.5px solid rgba(10,166,166,0.2);font-size:0.95rem;cursor:pointer;background:var(--card)">
+                <option value="">All Specialities</option>
+                <option value="General">General Dentistry</option>
+                <option value="Implants">Implants & Dentures</option>
+                <option value="Cosmetic">Cosmetic Dentistry</option>
+                <option value="Surgery">Oral Surgery</option>
+              </select>
+            </div>
+            <button id="clearSearch" type="button" style="padding:0.8rem 1rem;border-radius:8px;border:0;background:var(--accent);color:#fff;cursor:pointer;font-weight:600;font-size:0.9rem;height:fit-content">Clear All</button>
           </div>
+          <div id="resultCount" class="muted" aria-live="polite" style="margin-bottom:1rem;font-weight:500;font-size:0.95rem">Showing all doctors and clinics</div>
 
           <table id="clinicTable" aria-describedby="clinic-list">
             <thead>
@@ -972,9 +988,51 @@
 
   <script src="script.js"></script>
   <script>
-    // Year fill and retain services search script
     document.getElementById('year').textContent = new Date().getFullYear();
-    // Reuse existing client-side search already present above; no changes needed here.
+    (function(){
+      const searchInput = document.getElementById('searchInput');
+      const locationFilter = document.getElementById('locationFilter');
+      const specialityFilter = document.getElementById('specialityFilter');
+      const clearBtn = document.getElementById('clearSearch');
+      const table = document.getElementById('clinicTable');
+      const resultCount = document.getElementById('resultCount');
+      if(!searchInput || !table) return;
+      const rows = Array.from(table.querySelectorAll('tbody tr'));
+      function performSearch() {
+        const nameQuery = searchInput.value.toLowerCase().trim();
+        const locQuery = locationFilter.value.toLowerCase().trim();
+        const specQuery = specialityFilter.value.toLowerCase().trim();
+        let found = 0;
+        rows.forEach(row => {
+          const cells = row.querySelectorAll('td');
+          const clinic = (cells[0] ? cells[0].textContent : '').toLowerCase();
+          const loc = (cells[1] ? cells[1].textContent : '').toLowerCase();
+          const doc = (cells[2] ? cells[2].textContent : '').toLowerCase();
+          const exp = (cells[3] ? cells[3].textContent : '').toLowerCase();
+          let show = true;
+          if(nameQuery && !clinic.includes(nameQuery) && !doc.includes(nameQuery)) show = false;
+          if(locQuery && !loc.includes(locQuery)) show = false;
+          if(specQuery && !exp.includes(specQuery) && !doc.includes(specQuery)) show = false;
+          row.style.display = show ? '' : 'none';
+          if(show) found++;
+        });
+        if(resultCount) {
+          if(found === 0) resultCount.textContent = 'No doctors found matching your search';
+          else if(found === rows.length) resultCount.textContent = 'Showing all ' + rows.length + ' doctors';
+          else resultCount.textContent = 'Found ' + found + ' matching doctor(s) out of ' + rows.length;
+        }
+      }
+      searchInput.addEventListener('input', performSearch);
+      if(locationFilter) locationFilter.addEventListener('input', performSearch);
+      if(specialityFilter) specialityFilter.addEventListener('change', performSearch);
+      clearBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        if(locationFilter) locationFilter.value = '';
+        if(specialityFilter) specialityFilter.value = '';
+        performSearch();
+        searchInput.focus();
+      });
+    })();
   </script>
   </body>
 </html>

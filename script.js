@@ -52,19 +52,17 @@
 
         // Mobile menu toggle
         function openMobile(){
-          mobileNav.classList.add('open');
-          mobileNav.setAttribute('aria-hidden','false');
-          menuBtn.setAttribute('aria-expanded','true');
+          if(mobileNav){ mobileNav.classList.add('open'); mobileNav.setAttribute('aria-hidden','false'); }
+          if(menuBtn) menuBtn.setAttribute('aria-expanded','true');
         }
         function closeMobile(){
-          mobileNav.classList.remove('open');
-          mobileNav.setAttribute('aria-hidden','true');
-          menuBtn.setAttribute('aria-expanded','false');
+          if(mobileNav){ mobileNav.classList.remove('open'); mobileNav.setAttribute('aria-hidden','true'); }
+          if(menuBtn) menuBtn.setAttribute('aria-expanded','false');
         }
-        menuBtn.addEventListener('click', ()=>{
-          if(mobileNav.classList.contains('open')) closeMobile(); else openMobile();
+        if(menuBtn) menuBtn.addEventListener('click', ()=>{
+          if(mobileNav && mobileNav.classList.contains('open')) closeMobile(); else openMobile();
         });
-        mobileLinks.forEach(a=>a.addEventListener('click', ()=> closeMobile()));
+        if(mobileLinks) mobileLinks.forEach(a=>a.addEventListener('click', ()=> closeMobile()));
 
         // Close mobile menu on ESC
         document.addEventListener('keydown', (e)=>{
@@ -73,7 +71,7 @@
 
         // Toggle header shadow when scrolling
         function onScroll(){
-          if(window.scrollY > 12) header.classList.add('scrolled'); else header.classList.remove('scrolled');
+          if(window.scrollY > 12) header && header.classList.add('scrolled'); else header && header.classList.remove('scrolled');
         }
         window.addEventListener('scroll', onScroll, {passive:true});
         onScroll();
@@ -198,7 +196,7 @@
             const target = this.getAttribute('href');
             if(target && target.startsWith('#')){
               // Let default behavior handle top anchor; close mobile if open
-              if(mobileNav.classList.contains('open')) closeMobile();
+              if(mobileNav && mobileNav.classList.contains('open')) closeMobile();
             }
           });
         });

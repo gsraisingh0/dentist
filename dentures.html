@@ -597,7 +597,7 @@
         <a href="dental-implant.html">Dental Implant</a>
         <a href="dental-bridge.html">Dental Bridge</a>
         <a href="dentures.html">Dentures</a>
-        <!-- <a href="services.html">Services</a> -->
+        <a href="services.html">Services</a>
         <a href="about.html">About</a>
         <a href="tips.html">Tips</a>
         </nav>
@@ -1079,6 +1079,19 @@
           });
         }
         initTheme();
+
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileNav = document.getElementById('mobileNav');
+        function openMobile(){ if(mobileNav){ mobileNav.classList.add('open'); mobileNav.setAttribute('aria-hidden','false'); } if(menuBtn) menuBtn.setAttribute('aria-expanded','true'); }
+        function closeMobile(){ if(mobileNav){ mobileNav.classList.remove('open'); mobileNav.setAttribute('aria-hidden','true'); } if(menuBtn) menuBtn.setAttribute('aria-expanded','false'); }
+        if(menuBtn) menuBtn.addEventListener('click', ()=>{ if(mobileNav && mobileNav.classList.contains('open')) closeMobile(); else openMobile(); });
+        document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeMobile(); });
+
+        // Toggle header shadow when scrolling
+        const header = document.querySelector('.site-header');
+        function onScroll(){ if(window.scrollY > 12) header && header.classList.add('scrolled'); else header && header.classList.remove('scrolled'); }
+        window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
 
         // populate year
         document.getElementById('year').textContent = new Date().getFullYear();

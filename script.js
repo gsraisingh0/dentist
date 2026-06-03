@@ -190,6 +190,29 @@
         // Also update active state when hash changes (for anchor links)
         window.addEventListener('hashchange', setActiveNav);
 
+        
+        // Intersection Observer for fade-in animations
+        const fadeElements = document.querySelectorAll('.fade-in-up');
+        if (fadeElements.length > 0) {
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+              }
+            });
+          }, {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+          });
+
+          fadeElements.forEach(el => {
+            if(!el.classList.contains('visible')) {
+              observer.observe(el);
+            }
+          });
+        }
+
         // Smooth scroll for internal links (enhanced behavior)
         document.querySelectorAll('a[href^="#"]').forEach(a=>{
           a.addEventListener('click', function(e){
